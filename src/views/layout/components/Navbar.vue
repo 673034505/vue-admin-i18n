@@ -5,7 +5,7 @@
     <nx-breadcrumb class="breadcrumb-container" />
 
     <div class="right-menu">
-      <error-log class="errLog-container right-menu-item" />
+      <!-- <error-log class="errLog-container right-menu-item" /> -->
 
       <!-- <error-log class="errLog-container right-menu-item"></error-log> -->
       <nx-top-lock style="cursor:pointer" class="nx-help" />
