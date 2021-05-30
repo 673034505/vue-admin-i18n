@@ -1,29 +1,30 @@
 <template>
-  <div class="app-container">
-   <nx-github-corner></nx-github-corner>
-     <!-- <a target="_blank" href="https://github.com/mgbq/vue-permission"><img
+  <!-- <div class="app-container"> -->
+  <div>
+    <!-- <nx-github-corner /> -->
+    <!-- <a target="_blank" href="https://github.com/mgbq/vue-permission"><img
         style="position: absolute; top: 48px; right: 0; border: 0;"
         src="../../../static/img/report/forkme.png"
         alt="Fork me on GitHub"></a> -->
     <div class="item">
       <h4>数据展示</h4>
-      <nx-data-display :option="option"></nx-data-display>
+      <nx-data-display :option="option" />
     </div>
     <div class="item">
       <h4>选项卡展示</h4>
-      <nx-data-tabs :option="easyDataOption"></nx-data-tabs>
+      <nx-data-tabs :option="easyDataOption" />
     </div>
     <div class="item">
       <h4>卡片的展示</h4>
-      <nx-data-card :option="easyDataOption0"></nx-data-card>
+      <nx-data-card :option="easyDataOption0" />
     </div>
     <div class="item">
       <h4>带数字的展示</h4>
-      <nx-data-icons :option="easyDataOption1"></nx-data-icons>
+      <nx-data-icons :option="easyDataOption1" />
     </div>
     <div class="item">
       <h4>简易展示</h4>
-      <nx-data-icons :option="easyDataOption2"></nx-data-icons>
+      <nx-data-icons :option="easyDataOption2" />
     </div>
   </div>
 </template>
@@ -36,7 +37,7 @@ import nxDataTabs from '@/components/nx-data-tabs/nx-data-tabs'
 import nxDataIcons from '@/components/nx-data-icons/nx-data-icons'
 import nxGithubCorner from '@/components/nx-github-corner'
 export default {
-  name: 'report',
+  name: 'Report',
   components: {
     nxDataDisplay,
     nxDataCard,
@@ -207,10 +208,10 @@ export default {
       }
     }
   },
-  created() {},
+  computed: {},
   watch: {},
-  mounted() {},
-  computed: {}
+  created() {},
+  mounted() {}
 }
 </script>
 
