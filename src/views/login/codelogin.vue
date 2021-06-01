@@ -1,20 +1,20 @@
 <template>
-  <el-form class="login-form" status-icon :rules="loginRules" ref="loginForm" :model="loginForm" label-width="0">
+  <el-form ref="loginForm" class="login-form" status-icon :rules="loginRules" :model="loginForm" label-width="0">
     <el-form-item prop="phone">
-      <el-input size="small" @keyup.enter.native="handleLogin" v-model="loginForm.phone" auto-complete="off" placeholder="请输入手机号码">
-        <i slot="prefix" class="icon-shouji"></i>
+      <el-input v-model="loginForm.phone" size="small" auto-complete="off" placeholder="请输入手机号码" @keyup.enter.native="handleLogin">
+        <i slot="prefix" class="icon-shouji" />
       </el-input>
     </el-form-item>
     <el-form-item prop="code">
-      <el-input size="small" @keyup.enter.native="handleLogin" v-model="loginForm.code" auto-complete="off" placeholder="请输入验证码">
-        <i slot="prefix" class="icon-yanzhengma yanzhengma" style=""></i>
+      <el-input v-model="loginForm.code" size="small" auto-complete="off" placeholder="请输入验证码" @keyup.enter.native="handleLogin">
+        <i slot="prefix" class="icon-yanzhengma yanzhengma" style="" />
         <template slot="append">
-          <span @click="handleSend" class="msg-text" :class="[{display:msgKey}]">{{msgText}}</span>
+          <span class="msg-text" :class="[{display:msgKey}]" @click="handleSend">{{ msgText }}</span>
         </template>
       </el-input>
     </el-form-item>
     <el-form-item>
-      <el-button size="small" type="primary" @click.native.prevent="handleLogin" class="login-submit">登录</el-button>
+      <el-button size="small" type="primary" class="login-submit" @click.native.prevent="handleLogin">登录</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -26,7 +26,8 @@ const MSGSCUCCESS = '${time}秒后重发'
 const MSGTIME = 60
 import { isvalidatemobile } from '@/utils/validate'
 export default {
-  name: 'codelogin',
+  name: 'Codelogin',
+  props: [],
   data() {
     const validatePhone = (rule, value, callback) => {
       if (isvalidatemobile(value)[0]) {
@@ -56,11 +57,10 @@ export default {
       }
     }
   },
-  created() {},
-  mounted() {},
   computed: {
   },
-  props: [],
+  created() {},
+  mounted() {},
   methods: {
     handleSend() {
       if (this.msgKey) return

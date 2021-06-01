@@ -14,6 +14,9 @@
           <el-tab-pane label="用户密码" name="user">
             <userLogin />
           </el-tab-pane>
+          <el-tab-pane label="用户注册" name="signIn">
+            <signIn />
+          </el-tab-pane>
           <!-- <el-tab-pane label="短信验证码" name="code">
             <codeLogin />
           </el-tab-pane> -->
@@ -25,12 +28,14 @@
 </template>
 <script>
 import userLogin from './userlogin'
+import signIn from './signIn'
 import codeLogin from './codelogin'
 import { mapGetters } from 'vuex'
 export default {
   name: 'Login',
   components: {
     userLogin,
+    signIn,
     codeLogin
   },
   props: [],
@@ -104,6 +109,31 @@ export default {
   margin-top: 20px;
   width: 100%;
   border-radius: 28px;
+      color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+}
+.el-tabs__item.is-active{
+   color: #409eff;
+}
+.el-tabs__active-bar{
+    background-color: #409eff;
+}
+.el-tabs__item:hover{
+    color: #409EFF;
+    cursor: pointer;
+}
+.el-button--primary.is-active, .el-button--primary:active{
+      background: #3a8ee6;
+    border-color: #3a8ee6;
+    color: #FFF;
+}
+.el-button--primary:focus, .el-button--primary:hover{
+      background: #66b1ff;
+    border-color: #66b1ff;
+    color: #FFF;
 }
 .login-form {
   margin: 10px 0;

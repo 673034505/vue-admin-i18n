@@ -1,19 +1,18 @@
 <template>
   <el-form ref="loginForm" class="login-form" status-icon :rules="loginRules" :model="loginForm" label-width="0">
     <el-form-item prop="username">
-      <el-input v-model="loginForm.username" size="small" auto-complete="off" placeholder="请输入用户名" @keyup.enter.native="handleLogin">
+      <el-input v-model="loginForm.username" size="small" auto-complete="off" placeholder="请输入用户名" @keyup.enter.native="handleSignIn">
         <i slot="prefix" class="icon-yonghu" />
       </el-input>
     </el-form-item>
     <el-form-item prop="password">
-      <el-input v-model="loginForm.password" size="small" :type="passwordType" auto-complete="off" placeholder="请输入密码" @keyup.enter.native="handleLogin">
+      <el-input v-model="loginForm.password" size="small" :type="passwordType" auto-complete="off" placeholder="请输入密码" @keyup.enter.native="handleSignIn">
         <i slot="suffix" class="el-icon-view el-input__icon" @click="showPassword" />
         <i slot="prefix" class="icon-mima" />
       </el-input>
     </el-form-item>
-    <el-checkbox v-model="checked">记住账号</el-checkbox>
     <el-form-item>
-      <el-button type="primary" size="small" class="login-submit" @click.native.prevent="handleLogin">登录</el-button>
+      <el-button type="primary" size="small" class="login-submit" @click.native.prevent="handleSignIn">注册</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -80,14 +79,17 @@ export default {
         ? (this.passwordType = 'password')
         : (this.passwordType = '')
     },
-    handleLogin() {
-      this.$refs.loginForm.validate(valid => {
-        if (valid) {
-          this.$store.dispatch('Login', this.loginForm).then(res => {
-            this.$router.push({ path: '/dashboard/dashboard' })
-          })
-        }
-      })
+    // handleLogin() {
+    //   this.$refs.loginForm.validate(valid => {
+    //     if (valid) {
+    //       this.$store.dispatch('Login', this.loginForm).then(res => {
+    //         this.$router.push({ path: '/dashboard/dashboard' })
+    //       })
+    //     }
+    //   })
+    // }
+    handleSignIn() {
+      console.log('===========注册')
     }
   }
 }
