@@ -12,7 +12,7 @@
     </transition>
     <transition-group name="fade">
       <template v-if="!isCollapse">
-        <span key="1" class="logo_title is-bold"> 管理系统 </span>
+        <span key="1" class="logo_title is-bold"> {{ generateSkinTitle('common','title') }} </span>
         <!-- <span key="2" class="logo_subtitle">111</span> -->
       </template>
     </transition-group>
@@ -21,6 +21,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { generateSkinTitle } from '@/utils/i18n'
 export default {
   name: 'Logo',
   props: ['isCollapse'],
@@ -34,7 +35,9 @@ export default {
       return this.website.logo.indexOf('static') !== -1
     }
   },
-  methods: {}
+  methods: {
+    generateSkinTitle
+  }
 }
 </script>
 

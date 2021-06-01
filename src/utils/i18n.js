@@ -16,3 +16,13 @@ export function generateSkinColor(color) {
   }
   return color
 }
+export function generateSkinTitle(common, title) {
+  const hasKey = this.$te(`${common}.` + title)
+  const translatedTitle = this.$t(`${common}.` + title) // $t :this method from vue-i18n, inject in @/lang/index.js
+  console.log(title, hasKey)
+  if (hasKey) {
+    return translatedTitle
+  }
+
+  return title
+}

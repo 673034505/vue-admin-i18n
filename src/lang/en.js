@@ -119,5 +119,8 @@ export default {
     tips: 'tips',
     description: 'description',
     documentation: 'documentation'
+  },
+  common: {
+    title: '管理系统1'
   }
 }
