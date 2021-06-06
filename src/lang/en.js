@@ -12,6 +12,9 @@ export default {
     Default: 'Default'
   },
   route: {
+    UserAdmin: '账号管理',
+    User: '用户管理',
+    Role: '角色管理',
     AliIcons: 'AliIcons',
     list: 'list',
     Digitalanimation: 'Digitalanimation',

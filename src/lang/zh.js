@@ -14,6 +14,9 @@ export default {
     Default: '默认'
   },
   route: {
+    UserAdmin: '账号管理',
+    User: '用户管理',
+    Role: '角色管理',
     AliIcons: '阿里图标',
     contextmenu: '右键菜单',
     simple: '基础',

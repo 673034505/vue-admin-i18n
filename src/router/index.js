@@ -76,98 +76,98 @@ export const constantRouterMap = [
   //   ]
   // },
   // 图标组件
-  {
-    path: '/icons',
-    component: Layout,
-    redirect: '/icons/iconIndex',
-    name: 'icons',
-    meta: {
-      title: 'Icons',
-      icon: 'icon'
-    },
-    children: [
-      {
-        path: 'iconIndex',
-        name: 'iconIndex',
-        component: () => import('@/views/icons/svg-icons/iconIndex'),
-        meta: { title: 'svgicons', icon: 'icon' }
-      },
-      {
-        path: 'font-awesome',
-        name: 'font-awesome',
-        component: () => import('@/views/icons/font-awesome/'),
-        meta: { title: 'fontawesome', icon: 'font-awesome' }
-      },
-      {
-        path: 'AliIcons',
-        name: 'AliIcons',
-        component: () => import('@/views/icons/AliIcons/'),
-        meta: { title: 'AliIcons', icon: 'AliIcons' }
-      }
-    ]
-  },
-  // 表单
-  {
-    path: '/form',
-    component: Layout,
-    redirect: '/form/BaseForm',
-    name: 'form',
-    meta: {
-      title: 'form',
-      icon: 'form'
-    },
-    children: [
-      {
-        path: 'BaseForm',
-        name: 'BaseForm',
-        component: () => import('@/views/form/BaseForm'),
-        meta: { title: 'BaseForm' }
-      },
-      {
-        path: 'VueEditor',
-        name: 'VueEditor',
-        component: () => import('@/views/form/VueEditor'),
-        meta: { title: 'VueEditor' }
-      },
-      {
-        path: 'Upload',
-        name: 'Upload',
-        component: () => import('@/views/form/Upload'),
-        meta: { title: 'Upload' }
-      }
-    ]
-  },
-  // excel 下载和渲染
-  {
-    path: '/excel',
-    component: Layout,
-    redirect: '/excel/exportExcel',
-    name: 'excel',
-    meta: {
-      title: 'excel',
-      icon: 'excel'
-    },
-    children: [
-      {
-        path: 'exportExcel',
-        name: 'exportExcel',
-        component: () => import('@/views/excel/exportExcel'),
-        meta: { title: 'exportExcel' }
-      },
-      {
-        path: 'selectExcel',
-        name: 'selectExcel',
-        component: () => import('@/views/excel/selectExcel'),
-        meta: { title: 'selectExcel' }
-      },
-      {
-        path: 'uploadExcel',
-        name: 'uploadExcel',
-        component: () => import('@/views/excel/uploadExcel'),
-        meta: { title: 'uploadExcel' }
-      }
-    ]
-  },
+  // {
+  //   path: '/icons',
+  //   component: Layout,
+  //   redirect: '/icons/iconIndex',
+  //   name: 'icons',
+  //   meta: {
+  //     title: 'Icons',
+  //     icon: 'icon'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'iconIndex',
+  //       name: 'iconIndex',
+  //       component: () => import('@/views/icons/svg-icons/iconIndex'),
+  //       meta: { title: 'svgicons', icon: 'icon' }
+  //     },
+  //     {
+  //       path: 'font-awesome',
+  //       name: 'font-awesome',
+  //       component: () => import('@/views/icons/font-awesome/'),
+  //       meta: { title: 'fontawesome', icon: 'font-awesome' }
+  //     },
+  //     {
+  //       path: 'AliIcons',
+  //       name: 'AliIcons',
+  //       component: () => import('@/views/icons/AliIcons/'),
+  //       meta: { title: 'AliIcons', icon: 'AliIcons' }
+  //     }
+  //   ]
+  // },
+  // // 表单
+  // {
+  //   path: '/form',
+  //   component: Layout,
+  //   redirect: '/form/BaseForm',
+  //   name: 'form',
+  //   meta: {
+  //     title: 'form',
+  //     icon: 'form'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'BaseForm',
+  //       name: 'BaseForm',
+  //       component: () => import('@/views/form/BaseForm'),
+  //       meta: { title: 'BaseForm' }
+  //     },
+  //     {
+  //       path: 'VueEditor',
+  //       name: 'VueEditor',
+  //       component: () => import('@/views/form/VueEditor'),
+  //       meta: { title: 'VueEditor' }
+  //     },
+  //     {
+  //       path: 'Upload',
+  //       name: 'Upload',
+  //       component: () => import('@/views/form/Upload'),
+  //       meta: { title: 'Upload' }
+  //     }
+  //   ]
+  // },
+  // // excel 下载和渲染
+  // {
+  //   path: '/excel',
+  //   component: Layout,
+  //   redirect: '/excel/exportExcel',
+  //   name: 'excel',
+  //   meta: {
+  //     title: 'excel',
+  //     icon: 'excel'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'exportExcel',
+  //       name: 'exportExcel',
+  //       component: () => import('@/views/excel/exportExcel'),
+  //       meta: { title: 'exportExcel' }
+  //     },
+  //     {
+  //       path: 'selectExcel',
+  //       name: 'selectExcel',
+  //       component: () => import('@/views/excel/selectExcel'),
+  //       meta: { title: 'selectExcel' }
+  //     },
+  //     {
+  //       path: 'uploadExcel',
+  //       name: 'uploadExcel',
+  //       component: () => import('@/views/excel/uploadExcel'),
+  //       meta: { title: 'uploadExcel' }
+  //     }
+  //   ]
+  // },
   {
     path: '/i18n-demo',
     component: Layout,
@@ -189,6 +189,38 @@ export default new Router({
   routes: constantRouterMap
 })
 export const asyncRouterMap = [
+  {
+    path: '/user',
+    component: Layout,
+    redirect: '/system/user',
+    name: 'system',
+    alwaysShow: true, // will always show the root menu
+    meta: {
+      title: 'UserAdmin',
+      icon: 'user',
+      roles: ['admin', 'editor'] // you can set roles in root nav
+    },
+    children: [
+      {
+        path: 'user',
+        component: () => import('@/views/system/user/user'),
+        name: 'user',
+        meta: {
+          title: 'User',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      },
+      {
+        path: 'role',
+        component: () => import('@/views/system/user/role'),
+        name: 'role',
+        meta: {
+          title: 'Role',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      }
+    ]
+  },
   {
     path: '/permission',
     component: Layout,
