@@ -5,15 +5,16 @@
         <el-radio-button
           v-for="(item, index) in radioOptions"
           :key="index"
-          :label="item.value">
-          {{item.label}}
+          :label="item.value"
+        >
+          {{ item.label }}
         </el-radio-button>
       </el-radio-group>
     </template>
-    <el-row style="margin: -10px;"  class="icons-wrapper">
-      <el-alert title="点击图标复制代码" type="info" class="d2-m-10" style="width: auto;"/>
-      <el-col v-for="(iconItem, iconIndex) in iconShow.icon" :key="iconIndex" :span="6" class="d2-p-10"  >
-        <nx-icon-cell :icon="iconItem"/>
+    <el-row style="margin: -10px;" class="icons-wrapper">
+      <el-alert title="点击图标复制代码" type="info" class="d2-m-10" style="width: auto;" />
+      <el-col v-for="(iconItem, iconIndex) in iconShow.icon" :key="iconIndex" :span="6" class="d2-p-10">
+        <nx-icon-cell :icon="iconItem" />
       </el-col>
     </el-row>
   </nx-container>
@@ -65,6 +66,6 @@ export default {
     color: #24292e;
     cursor: pointer;
   }
- 
+
 }
 </style>
