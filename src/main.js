@@ -47,7 +47,7 @@ Object.keys(filters).forEach(key => {
 })
 
 Vue.use(VCharts)
-Vue.use(ElementUI, { locale })
+Vue.use(ElementUI, { size: 'small', locale })
 iconfontVersion.forEach(ele => {
   loadStyle(iconfontUrl.replace('$key', ele))
 })
